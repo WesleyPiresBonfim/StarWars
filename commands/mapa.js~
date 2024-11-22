@@ -1,0 +1,68 @@
+const fs = require('fs');
+const path = require('path');
+const { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { SlashCommandBuilder } = require('@discordjs/builders');
+
+//module.exports = {
+//    data: new SlashCommandBuilder()
+//        .setName('mapa')
+//        .setDescription('Exibe o mapa interativo da Europa.')
+//        .setDefaultPermission(false),  // Desativa o comando para todos os usuários
+//
+//    async execute(interaction) {
+//        console.log('Comando /mapa iniciado'); // Log inicial
+//
+//        const mapEmbed = new EmbedBuilder()
+//            .setTitle('Mapa Interativo da Europa')
+//            .setDescription('Clique em um país para ver as opções de ação.')
+//            .setImage('https://link-para-mapa.png'); // Link para a imagem do mapa interativo da Europa
+//
+//        console.log('Embed criada:', mapEmbed); // Log para verificar a criação da embed
+//
+//        // Menu suspenso para seleção de país
+//        const countrySelect = new StringSelectMenuBuilder()
+//            .setCustomId('country_select')
+//            .setPlaceholder('Selecione um país')
+//            .addOptions([
+//            { label: 'França', value: 'France' },
+//            { label: 'Alemanha', value: 'Germany' }
+//            // Adicione mais países conforme necessário
+//        ]);
+//
+//        console.log('Menu suspenso criado:', countrySelect); // Log para verificar o menu suspenso
+//
+//        // Linha de ação
+//        const row = new ActionRowBuilder().addComponents(countrySelect);
+//        console.log('Linha de ação criada:', row); // Log para verificar a linha de ação
+//
+//        // Responder com a embed e os componentes
+//        await interaction.reply({ embeds: [mapEmbed], components: [row], ephemeral: false });
+//        console.log('Resposta enviada ao usuário'); // Log para confirmar o envio da resposta
+//    },
+//
+//    // Este código será acionado ao escolher uma ação do país
+//    async countrySelectHandler(interaction) {
+//        const country = interaction.values[0];
+//        console.log(`País selecionado: ${country}`); // Log para verificar o país selecionado
+//
+//        const actionRow = new ActionRowBuilder().addComponents(
+//            new ButtonBuilder()
+//                .setCustomId('atacar')
+//                .setLabel('Atacar')
+//                .setStyle(ButtonStyle.Danger),
+//            new ButtonBuilder()
+//                .setCustomId('defender')
+//                .setLabel('Defender')
+//                .setStyle(ButtonStyle.Secondary),
+//            new ButtonBuilder()
+//                .setCustomId('ver_informacoes')
+//                .setLabel('Ver Informações')
+//                .setStyle(ButtonStyle.Primary),
+//        );
+//
+//        console.log('Linha de ação para ações do país criada:', actionRow); // Log para verificar a linha de ação para o país
+//
+//        await interaction.update({ content: `Escolha uma ação para o país **${country}**`, components: [actionRow], ephemeral: true });
+//        console.log('Resposta de ação atualizada para o usuário'); // Log para confirmar a atualização da resposta
+//    }
+//};

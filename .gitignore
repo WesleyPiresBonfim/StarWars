@@ -1,0 +1,11 @@
+#Node.js
+node_modules/
+
+# IDEs
+.idea/
+
+StarWars.iml
+data/
+eng.traineddata
+index.js
+test_gptj.py
